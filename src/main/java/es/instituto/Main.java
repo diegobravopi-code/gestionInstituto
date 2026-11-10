@@ -5,7 +5,7 @@ import es.instituto.modelo.Matricula;
 import org.hibernate.Session;
 
 public class Main {
-    static void main(String[] args) {
+    static void main() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             String version = session.createNativeQuery("SELECT VERSION()", String.class)
                     .getSingleResult();
