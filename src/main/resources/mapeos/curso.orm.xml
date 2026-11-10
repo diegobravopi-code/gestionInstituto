@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm
+                                     https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd"
+                 version="3.2">
+
+    <package>es.instituto.modelo</package>
+
+    <entity class="Curso" access="FIELD">
+        <table name="curso"/>
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+            <basic name="nombre">
+                <column name="nombre" length="80" nullable="false"/>
+            </basic>
+            <basic name="plazasLibres">
+                <column name="plazas_libres" nullable="false"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

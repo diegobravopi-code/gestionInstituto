@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Conexión: los mismos datos que usabas con JDBC -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/instituto</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">alumno</property>
+
+        <!-- Comportamiento -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Clases y ficheros mapeados (se completan en las secciones 8 a 10) -->
+        <mapping class="es.instituto.modelo.Alumno"/>
+        <mapping class="es.instituto.modelo.Matricula"/>
+        <mapping resource="mapeos/curso.orm.xml"/>
+    </session-factory>
+</hibernate-configuration>
